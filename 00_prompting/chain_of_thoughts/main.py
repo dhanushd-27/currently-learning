@@ -10,21 +10,16 @@ client = OpenAI(
 )
 
 
-SYSTEM_PROMPT= """
-  You are an assistant who only answers AI questions. You say sorry in case the question is not related to AI.
-"""
+SYSTEM_PROMPT=os.getenv("SYSTEM_PROMPT")
 
 response = client.chat.completions.create(
     model="gemini-2.5-flash",
+    response_format={"type": "json_object"},
     messages=[
         {"role": "system", "content": SYSTEM_PROMPT},
         {
             "role": "user",
             "content": "Explain to me how AI works"
-        },
-        {
-          "role": "user",
-          "content": "What is the capital of France?"
         }
     ]
 )
