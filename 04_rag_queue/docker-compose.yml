@@ -1,0 +1,19 @@
+# qdrant is already present in the 03_langchain project
+# so we can use
+
+services:
+  redis:
+    image: redis:8.2-alpine
+    ports:
+      - '6379:6379'
+  
+  worker:
+    build: .
+    command: python -m rq worker
+    depends_on:
+      - redis
+    environment:
+      - REDIS_URL=redis://redis:6379
+    volumes:
+      - .:/app
+    working_dir: /app
