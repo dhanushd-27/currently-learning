@@ -21,6 +21,7 @@ azure-cosmos==4.9.0
 azure-identity==1.24.0
 azure-search-documents==11.5.3
 azure-storage-blob==12.26.0
+backoff==2.2.1
 blinker==1.9.0
 cachetools==6.2.0
 certifi==2025.8.3
@@ -94,6 +95,7 @@ markdown-it-py==4.0.0
 MarkupSafe==3.0.2
 marshmallow==3.26.1
 mdurl==0.1.2
+mem0ai==1.0.0
 more-itertools==10.8.0
 msal==1.33.0
 msal-extensions==1.3.1
@@ -118,10 +120,11 @@ pathable==0.4.4
 pillow==11.3.0
 pluggy==1.6.0
 portalocker==3.2.0
+posthog==6.8.0
 prance==25.4.8.0
 propcache==0.3.2
 proto-plus==1.26.1
-protobuf==6.32.0
+protobuf==5.29.5
 pyarrow==21.0.0
 pyasn1==0.6.1
 pyasn1_modules==0.4.2
