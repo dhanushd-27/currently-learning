@@ -1,3 +1,5 @@
+# Mem0 is a vector database for storing and retrieving memories.
+
 import os
 from dotenv import load_dotenv
 from mem0 import Memory
